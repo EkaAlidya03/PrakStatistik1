@@ -1,0 +1,12 @@
+data_Eka = read.delim("clipboard")
+View(data_Eka)
+mean(data_Eka$Tinggi.Badan)
+str(data_Eka)
+
+data_Eka_csv = read.csv("C:/Users/Asus/OneDrive/Documents/PrakStatistika/DataPraktikum1Eka.csv")
+View(data_Eka_csv)
+
+install.packages("xlsx")
+library("xlsx")
+data_eka_xlsx=read.xlsx("C:/Users/Asus/OneDrive/Documents/PrakStatistika/DataPraktikum1Eka.xlsx",1)
+View(data_eka_xlsx)
