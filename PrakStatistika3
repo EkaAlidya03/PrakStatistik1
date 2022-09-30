@@ -1,0 +1,35 @@
+data_eka = read.csv("C:/Users/Asus/OneDrive/Documents/PrakStatistika/DataPraktikum1Eka.csv")
+View(data_eka)
+
+eka <- data_eka[4]  
+View(eka)
+
+eka$Tinggi.Badan <- ifelse(eka$Tinggi.Badan > 160, c("Tinggi"), c("Pendek"))
+View(eka)
+
+eka$Jurusan <- c("Infor21") 
+View(eka)
+
+eka$Fakultas <- c("FTI")
+View(eka)
+
+eka$Fakultas<-NULL
+View(eka)
+
+data_eka.kolom1dan2 <- data_eka[,1:2] 
+View(data_eka.kolom1dan2)
+
+data_eka.kolom3dan4 <- data_eka[,3:4] 
+View(data_eka.kolom3dan4)
+
+data_eka.kolom1sd4<-cbind(data_eka.kolom1dan2, data_eka.kolom3dan4) 
+View(data_eka.kolom1sd4)
+
+data_eka.baris1sd5 <- data_eka[1:5,] 
+data_eka.baris25sd30 <- data_eka[25:30,] 
+data_eka.baris1sd30 <- rbind(data_eka.baris1sd5, data_eka.baris25sd30) 
+View(data_eka.baris1sd30)
+
+data_eka.sort<-data_eka[order(data_eka$Waktu.Perjalanan),] 
+View(data_eka.sort)
+
