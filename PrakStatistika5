@@ -1,0 +1,4 @@
+eka=read.delim("clipboard")
+View(eka)
+str(eka)
+t.test(eka$volume, mu=14500)
