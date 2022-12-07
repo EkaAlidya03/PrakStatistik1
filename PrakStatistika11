@@ -1,0 +1,15 @@
+#latihan kesatu
+df_eka = read.delim("clipboard")
+head(df_eka)
+model <- aov(korosi~metode, data=df_eka)
+summary(model)
+tukey.test <- TukeyHSD(model)
+tukey.test
+
+#latihan kedua
+df_eka=PlantGrowth
+View(df_eka)
+model <- aov(weight~group, data=df_eka)
+summary(model)
+tukey.test <- TukeyHSD(model)
+tukey.test
