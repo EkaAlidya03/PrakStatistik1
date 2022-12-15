@@ -1,0 +1,17 @@
+df_eka=read.delim("clipboard")
+head(df_eka)
+model_reg=lm(df_eka$Y~df_eka$X)
+summary(model_reg)
+
+model_reg=lm(df_eka$Y~df_eka$X)
+summary(model_reg)
+
+df_eka=read.delim("clipboard")
+df_eka$brick_dummy <- ifelse(df_eka$Brick =="Yes", 1,0)
+df_eka$N_dummy1 <- ifelse(df_eka$Neighborhood =="West", 1,0)
+df_eka$N_dummy2 <- ifelse(df_eka$Neighborhood =="North", 1,0)
+model=lm(df_eka$Price~df_eka$SqFt+df_eka$Bedrooms+df_eka$Bathrooms+df_eka$brick_dummy+df_eka$N_dummy1+df_eka$N_dummy2)
+summary(model)
+
+by(df_eka$Price, df_eka$Neighborhood, mean)
+by(df_eka$Price, df_eka$Brick, mean)
